@@ -502,8 +502,8 @@ function Navbar({ scrollY, onOpenApp }: { scrollY: number; onOpenApp: () => void
    HERO — with 3D mockup
 ───────────────────────────────────────────────────────────────────────────── */
 
-const WORDS_L1 = ['Chat', 'with', 'any']
-const WORDS_L2 = ['document,', 'instantly.']
+const WORDS_L1 = ['Chat', 'with', 'research']
+const WORDS_L2 = ['papers,', 'instantly.']
 const WORDS_L3 = ['Understand', 'how', 'ideas', 'connect.']
 
 function Hero({ lerped, scrollY, onOpenApp }: {
@@ -578,7 +578,7 @@ function Hero({ lerped, scrollY, onOpenApp }: {
           transition={{ delay: 1.1, duration: 0.55 }}
           className="mt-7 text-lg text-zinc-400 max-w-[540px] mx-auto leading-relaxed"
         >
-          Upload any documents — PDFs, reports, books, notes, contracts.
+          Upload your research papers — PDFs, preprints, reports, and notes.
           PaperGraph AI builds a knowledge graph across all of them and lets
           you ask questions that span your entire collection at once.
         </motion.p>
@@ -632,9 +632,9 @@ function Hero({ lerped, scrollY, onOpenApp }: {
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PROBLEMS = [
-  { icon: '📚', title: 'Reading 20 docs is hard.', body: 'You forget what Doc 3 said when you\'re on Doc 17. Key details get lost. Cross-document connections never form.', label: 'The Problem' },
-  { icon: '🤖', title: '"Upload PDF to ChatGPT"', body: 'Works for one file at a time. No cross-document memory. No concept mapping. You lose the forest for the trees.', label: 'The Old Way' },
-  { icon: '🕸', title: 'Your entire collection. At once.', body: 'Vector search + knowledge graph across all your docs. Ask anything that spans your whole library — instantly.', label: 'The PaperGraph Way', highlight: true },
+  { icon: '📚', title: 'Reading 20 papers is hard.', body: 'You forget what Paper 3 said when you are on Paper 17. Key details get lost. Cross-paper connections never form.', label: 'The Problem' },
+  { icon: '🤖', title: '"Upload PDF to ChatGPT"', body: 'Works for one file at a time. No cross-paper memory. No concept mapping. You lose the forest for the trees.', label: 'The Old Way' },
+  { icon: '🕸', title: 'Your full research collection. At once.', body: 'Vector search + knowledge graph across all your papers. Ask anything that spans your whole research library, instantly.', label: 'The PaperGraph Way', highlight: true },
 ]
 
 function ProblemSection() {
@@ -642,7 +642,7 @@ function ProblemSection() {
     <section className="relative z-10 max-w-5xl mx-auto px-6 py-28">
       <Reveal3D>
         <p className="text-center text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-4">Why this exists</p>
-        <h2 className="text-center text-3xl font-bold text-white mb-14">Managing a document library is harder than it should be</h2>
+        <h2 className="text-center text-3xl font-bold text-white mb-14">Managing a research paper library is harder than it should be</h2>
       </Reveal3D>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {PROBLEMS.map((c, i) => (
@@ -671,7 +671,7 @@ function ProblemSection() {
 ───────────────────────────────────────────────────────────────────────────── */
 
 const STEPS = [
-  { icon: UploadCloud, num: '01', title: 'Upload',  desc: 'Drop PDFs, Word docs, or images. Unstructured.io detects layout — titles, tables, figures — not just raw text.' },
+  { icon: UploadCloud, num: '01', title: 'Upload',  desc: 'Drop paper PDFs, notes, or images. Unstructured.io detects layout: titles, tables, and figures, not just raw text.' },
   { icon: Layers,      num: '02', title: 'Embed',   desc: 'Every chunk is embedded with OpenAI and stored in ChromaDB. Semantic search finds related ideas even without keyword overlap.' },
   { icon: Share2,      num: '03', title: 'Graph',   desc: 'GPT-4o-mini extracts concept relationships: BERT → BASED_ON → Transformer. Stored as a directed knowledge graph.' },
   { icon: MessageSquare, num: '04', title: 'Ask',   desc: 'Four LangGraph agents: question rewriting, vector retrieval, graph lookup, GPT-4o synthesis. Answer streams in real time.' },
@@ -816,7 +816,7 @@ attention dispensing recurrence`}</pre>
 
 const FEATURES = [
   { icon: FileText,    title: 'PDF Viewer + Chat',  desc: 'Preview any paper while chatting. Every answer shows exactly which paper it came from.' },
-  { icon: Network,     title: 'Knowledge Graph',    desc: 'Visual force-directed graph of concept relationships across your entire library.' },
+  { icon: Network,     title: 'Knowledge Graph',    desc: 'Visual force-directed graph of concept relationships across your entire paper library.' },
   { icon: Sparkles,    title: '4 AI Agents',        desc: 'LangGraph chain: question rewriting → vector retrieval → graph lookup → GPT-4o synthesis.' },
   { icon: Zap,         title: 'Streaming Answers',  desc: 'Responses appear word-by-word as GPT generates them. No waiting for the full answer.' },
   { icon: BarChart2,   title: 'RAG vs GraphRAG',    desc: 'Side-by-side comparison of vector-only vs graph-augmented retrieval on any question.' },
@@ -828,7 +828,7 @@ function FeaturesSection() {
     <section className="relative z-10 max-w-5xl mx-auto px-6 pb-28">
       <Reveal3D>
         <p className="text-center text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-4">Everything you need</p>
-        <h2 className="text-center text-3xl font-bold text-white mb-14">Built for any document collection</h2>
+        <h2 className="text-center text-3xl font-bold text-white mb-14">Built for research paper collections</h2>
       </Reveal3D>
 
       {/* Spotlight grid wrapper */}
@@ -897,7 +897,7 @@ function CtaSection({ onOpenApp }: { onOpenApp: () => void }) {
       <div className="w-px h-16 bg-gradient-to-b from-transparent to-indigo-500/30 mx-auto mb-16" />
       <Reveal3D>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Your entire document library.<br />
+          Your entire research paper library.<br />
           <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
             One conversation.
           </span>
@@ -934,7 +934,7 @@ function Footer() {
       <p className="text-xs text-zinc-600">
         PaperGraph AI &nbsp;·&nbsp; Built with LangChain + Unstructured.io &nbsp;·&nbsp;
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-400 transition-colors">GitHub</a>
-        &nbsp;·&nbsp; MIT License
+        &nbsp;·&nbsp; MIT License &nbsp;·&nbsp; <span className="text-zinc-700">Made by Atharva Ran</span>
       </p>
     </footer>
   )
