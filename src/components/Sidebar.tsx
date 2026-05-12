@@ -21,7 +21,7 @@ const NAV: { key: Page; icon: typeof MessageSquare; label: string; color: string
   { key: 'chat',    icon: MessageSquare, label: 'Chat',            color: '#818cf8' },
   { key: 'library', icon: BookOpen,      label: 'Library',         color: '#a78bfa' },
   { key: 'graph',   icon: Network,       label: 'Knowledge Graph', color: '#c084fc' },
-  { key: 'compare', icon: BarChart2,     label: 'Compare',         color: '#f59e0b' },
+  { key: 'insights', icon: BarChart2,     label: 'Insights',        color: '#f59e0b' },
 ]
 
 type UploadState = 'idle' | 'uploading' | 'building' | 'done' | 'error'
